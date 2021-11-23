@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="Multiple Projects">
+  <MonoDevelop.Ide.ItemProperties.SpeakerLibrary FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SpeakerAPI/Startup.cs">
+    <Files>
+      <File FileName="SpeakerLibrary/Class1.cs" Line="22" Column="48" />
+      <File FileName="SpeakerAPI/appsettings.json" Line="9" Column="32" />
+      <File FileName="SpeakerAPI/Data/SpeakerDbContext.cs" Line="16" Column="1" />
+      <File FileName="SpeakerAPI/Startup.cs" Line="31" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Speaker" expanded="True">
+            <Node name="BlazorClient" expanded="True" />
+            <Node name="SpeakerAPI" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
+            </Node>
+            <Node name="SpeakerLibrary" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.BlazorClient FirstBuild="True" PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.SpeakerAPI PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
+      <Items>
+        <StartupItem ItemId="{EB52EAD3-DE0C-4053-AE5D-CA5B95F1D677}" ItemName="BlazorClient" ConfigurationId="Default" />
+        <StartupItem ItemId="{DF520D3D-6903-4D4B-989B-0D3665C02C59}" ItemName="SpeakerAPI" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+</Properties>
