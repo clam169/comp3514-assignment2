@@ -1,0 +1,78 @@
+@page "/delete/{id}"
+
+<h2>Delete Speaker</h2>
+<a href="/">
+    <button>Back Home</button>
+</a>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+}
+
+@if (s != null) // Delete
+{
+    <EditForm Model="@speaker" OnValidSubmit="@HandleDelete">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <InputText placeholder="First Name" id="firstName" @bind-Value="@speaker.FirstName" />
+        <br />
+        <InputText placeholder="Last Name" id="lastName" @bind-Value="@speaker.LastName" />
+        <br />
+        <InputText placeholder="Email" id="email" @bind-Value="@speaker.Email" />
+        <br />
+        <InputText placeholder="Mobile" id="mobile" @bind-Value="@speaker.Mobile" />
+        <br />
+        <InputText placeholder="Specialization" id="specialization" @bind-Value="@speaker.Specialization" />
+        <br />
+        <InputText placeholder="City" id="city" @bind-Value="@speaker.City" />
+        <br />
+        <InputText placeholder="Province" id="province" @bind-Value="@speaker.Province" />
+        <br />
+        <InputText placeholder="Employer" id="email" @bind-Value="@speaker.Employer" />
+        <br />
+
+        <button btn btn-danger type="submit">Confirm DELETE</button>
+    </EditForm>
+}
+
+
+@code {
+    Speaker[] speakers;
+    Speaker s;
+    private Speaker speaker = new Speaker();
+    string baseUrl = "http://localhost:6001/";
+    protected async void HandleDelete()
+    {
+        string endpoint = $"{baseUrl}api/speakers/{speaker.SpeakerId}";
+        await httpClient.DeleteAsync(endpoint);
+        ReturnToIndex(); // causes the page to get automatically refreshed
+      }
+    protected async Task load()
+    {
+        speakers = await httpClient.GetFromJsonAsync<Speaker[]>($"{baseUrl}api/speakers");
+    }
+    protected async Task ShowSpeaker(string id)
+    {
+        s = await httpClient.GetFromJsonAsync<Speaker>($"{baseUrl}api/speakers/{id}");
+        speaker.SpeakerId = s.SpeakerId;
+        speaker.FirstName = s.FirstName;
+        speaker.LastName = s.LastName;
+        speaker.Email = s.Email;
+        speaker.Mobile = s.Mobile;
+        speaker.Specialization = s.Specialization;
+        speaker.City = s.City;
+        speaker.Province = s.Province;
+        speaker.Employer = s.Employer;
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        await ShowSpeaker(Id);
+    }
+    private void ReturnToIndex()
+    {
+        NavManager.NavigateTo("/");
+    }
+
+}

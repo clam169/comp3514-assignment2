@@ -1,0 +1,67 @@
+@page "/add"
+
+<h2>Add Speaker</h2>
+<a href="/">
+    <button>Back Home</button>
+</a>
+
+
+@if (speakers != null) // Insert form
+{
+    <EditForm Model="@speaker" OnValidSubmit="@HandleAdd">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <InputText placeholder="First Name" id="firstName" @bind-Value="@speaker.FirstName" />
+        <br />
+        <InputText placeholder="Last Name" id="lastName" @bind-Value="@speaker.LastName" />
+        <br />
+        <InputText placeholder="Email" id="email" @bind-Value="@speaker.Email" />
+        <br />
+        <InputText placeholder="Mobile" id="mobile" @bind-Value="@speaker.Mobile" />
+        <br />
+        <InputText placeholder="Specialization" id="specialization" @bind-Value="@speaker.Specialization" />
+        <br />
+        <InputText placeholder="City" id="city" @bind-Value="@speaker.City" />
+        <br />
+        <InputText placeholder="Province" id="province" @bind-Value="@speaker.Province" />
+        <br />
+        <InputText placeholder="Employer" id="email" @bind-Value="@speaker.Employer" />
+        <br />
+
+        <button type="submit">Submit</button>
+    </EditForm>
+
+    @code {
+
+    }
+}
+
+@code {
+    Speaker[] speakers;
+    private Speaker speaker = new Speaker();
+
+    private async void HandleAdd()
+    {
+        string endpoint = $"{baseUrl}api/speakers";
+
+        speaker.SpeakerId = Guid.NewGuid().ToString();
+
+        await httpClient.PostAsJsonAsync(endpoint, speaker);
+
+        ReturnToIndex();
+    }
+    string baseUrl = "http://localhost:6001/";
+    protected override async Task OnInitializedAsync()
+    {
+        await load();
+    }
+    protected async Task load()
+    {
+        speakers = await httpClient.GetFromJsonAsync<Speaker[]>($"{baseUrl}api/speakers");
+    }
+    private void ReturnToIndex()
+    {
+        NavManager.NavigateTo("/");
+    }
+}

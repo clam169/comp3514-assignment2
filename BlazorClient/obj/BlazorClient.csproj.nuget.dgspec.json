@@ -14,7 +14,7 @@
         "outputPath": "/Users/jolam/School/COMP3514/Speaker/BlazorClient/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/jolam/.config/NuGet/NuGet.Config"
+          "/Users/jolam/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -96,7 +96,7 @@
         "outputPath": "/Users/jolam/School/COMP3514/Speaker/SpeakerLibrary/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/jolam/.config/NuGet/NuGet.Config"
+          "/Users/jolam/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

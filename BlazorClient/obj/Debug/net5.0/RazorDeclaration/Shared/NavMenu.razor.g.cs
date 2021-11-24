@@ -82,6 +82,13 @@ using BlazorClient.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "/Users/jolam/School/COMP3514/Speaker/BlazorClient/_Imports.razor"
+using SpeakerLibrary;
+
+#line default
+#line hidden
+#nullable disable
     public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -90,7 +97,7 @@ using BlazorClient.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "/Users/jolam/School/COMP3514/Speaker/BlazorClient/Shared/NavMenu.razor"
+#line 33 "/Users/jolam/School/COMP3514/Speaker/BlazorClient/Shared/NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
@@ -104,6 +111,8 @@ using BlazorClient.Shared;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient httpClient { get; set; }
     }
 }
 #pragma warning restore 1591

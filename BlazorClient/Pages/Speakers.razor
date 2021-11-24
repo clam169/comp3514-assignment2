@@ -1,0 +1,40 @@
+﻿@page "/speakers"
+
+<h1>Speakers</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (speakers == null) {
+<p><em>Loading...</em></p>
+} else {
+    <a href="/add"> <button class="btn btn-success">Add</button></a>
+<table class='table table-hover'>
+  <tbody>
+    @foreach (var item in speakers) {
+    <tr>
+      <td>@item.SpeakerId</td>
+      <td>@item.FirstName @item.LastName</td>
+      <td><a class="btn btn-success btn-sm" href="/edit/@item.SpeakerId">edit</a></td>
+      <td><a class="btn btn-danger btn-sm" href="/delete/@item.SpeakerId">del</a></td>
+
+
+
+    </tr>
+    }
+  </tbody>
+</table>
+}
+
+@code {
+  Speaker[] speakers;
+  string baseUrl = "http://localhost:6001/";
+
+  protected override async Task OnInitializedAsync() {
+    await load();
+  }
+
+  protected async Task load() {
+    speakers= await httpClient.GetFromJsonAsync<Speaker[]>($"{baseUrl}api/speakers");
+        Console.WriteLine(speakers);
+  }
+}
