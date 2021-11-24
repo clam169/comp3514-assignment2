@@ -2,5 +2,8 @@
 /BlazorClient/obj
 /SpeakerAPI/bin
 /SpeakerAPI/obj
+/SpeakerAPI/dist
+
 /SpeakerLibrary/bin
 /SpeakerLibrary/obj
+/SpeakerLibrary/dist
