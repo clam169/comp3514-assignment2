@@ -32,15 +32,22 @@ namespace SpeakerAPI
                 .AllowAnyMethod()
                 .AllowAnyHeader();
             }));
+            var host = Configuration["DBHOST"] ?? "localhost";
+            var port = Configuration["DBPORT"] ?? "1433";
+            var user = Configuration["DBUSER"] ?? "sa";
+            var pwd = Configuration["DBPASSWORD"] ?? "SqlExpress!";
+            var db = Configuration["DBNAME"] ?? "Speaker";
 
+            var conStr = $"Server=tcp:{host},{port};Database={db};UID={user};PWD={pwd};";
+
+        
             services.AddControllers();
-            services.AddDbContext<SpeakerDbContext>(
-                option => option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
+            services.AddDbContext<SpeakerDbContext>(option => 
+                option.UseSqlServer(conStr));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, SpeakerDbContext context)
         {
             if (env.IsDevelopment())
             {
@@ -51,6 +58,8 @@ namespace SpeakerAPI
 
             app.UseAuthorization();
             app.UseCors("Policy");
+
+            context.Database.Migrate();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

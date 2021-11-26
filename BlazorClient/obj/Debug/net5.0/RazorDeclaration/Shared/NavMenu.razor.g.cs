@@ -97,7 +97,7 @@ using SpeakerLibrary;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 33 "/Users/jolam/School/COMP3514/Speaker/BlazorClient/Shared/NavMenu.razor"
+#line 18 "/Users/jolam/School/COMP3514/Speaker/BlazorClient/Shared/NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

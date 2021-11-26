@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eHA1QRb+nvLYZ+631ZurgQFkFpMgLdWm0GgXlyggRoDGwx+2NgXoexJlUU0f7BJd2AHE0NxeroOVymvVm2kSDA==",
+  "dgSpecHash": "HFqkPyKAUk5dReXR0IiGg6hxKAOM++tC5vEnfGWmrXyGnwULu2pc0plyarga6Tk3zkuMb0QBFAGVKZlLC5CIsg==",
   "success": true,
   "projectFilePath": "/Users/jolam/School/COMP3514/Speaker/BlazorClient/BlazorClient.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,7 @@
     "/Users/jolam/.nuget/packages/microsoft.extensions.primitives/5.0.0/microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "/Users/jolam/.nuget/packages/microsoft.jsinterop/5.0.11/microsoft.jsinterop.5.0.11.nupkg.sha512",
     "/Users/jolam/.nuget/packages/microsoft.jsinterop.webassembly/5.0.11/microsoft.jsinterop.webassembly.5.0.11.nupkg.sha512",
+    "/Users/jolam/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "/Users/jolam/.nuget/packages/system.io.pipelines/5.0.1/system.io.pipelines.5.0.1.nupkg.sha512",
     "/Users/jolam/.nuget/packages/system.net.http.json/5.0.0/system.net.http.json.5.0.0.nupkg.sha512",
     "/Users/jolam/.nuget/packages/microsoft.netcore.app.runtime.browser-wasm/5.0.11/microsoft.netcore.app.runtime.browser-wasm.5.0.11.nupkg.sha512"

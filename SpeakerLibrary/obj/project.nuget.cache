@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Oc7SQ6eywz1YAODcFKzxXKNvFMJcenXdjOp6l/jtuaf3HFK5Xaou35ex/FpRbOVJ+XmkxRrabBhwjcgUx8Uoqg==",
+  "dgSpecHash": "sC1vuCxoEFXDn5qx4oPfZB2DWqbl/yLGRrsze6rNkw1LVNAV0J7cy+KiO8Mwc3esRjUZzYi8xsvOMXQJOEXbrQ==",
   "success": true,
   "projectFilePath": "/Users/jolam/School/COMP3514/Speaker/SpeakerLibrary/SpeakerLibrary.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/jolam/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

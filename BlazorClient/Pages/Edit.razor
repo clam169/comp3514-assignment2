@@ -50,7 +50,7 @@
 
         ReturnToIndex(); // causes the page to get automatically refreshed
     }
-    string baseUrl = "http://localhost:6001/";
+    string baseUrl = "http://localhost:5000/";
     protected async Task load()
     {
         speakers = await httpClient.GetFromJsonAsync<Speaker[]>($"{baseUrl}api/speakers");

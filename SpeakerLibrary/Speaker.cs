@@ -13,11 +13,15 @@ namespace SpeakerLibrary
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
         [Required]
+        [EmailAddress]
         public string Email { get; set; }
         [Required]
         [Display(Name ="Mobile Number")]
+        [MaxLength(10)]
+        [MinLength(10)]
         public string Mobile { get; set; }
         [Required]
+
         [Display(Name = "Area of Specialization")]
         public string Specialization { get; set; }
         [Required]

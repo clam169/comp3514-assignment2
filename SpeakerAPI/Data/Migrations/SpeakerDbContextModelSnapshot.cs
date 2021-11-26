@@ -57,12 +57,12 @@ namespace SpeakerAPI.Data.Migrations
 
                     b.HasKey("SpeakerId");
 
-                    b.ToTable("Students");
+                    b.ToTable("Speakers");
 
                     b.HasData(
                         new
                         {
-                            SpeakerId = "eb775c74-8314-4ae2-a7ce-af1cc91f87b6",
+                            SpeakerId = "3c008559-c39f-4854-af5e-6a46a88a151d",
                             City = "Burnaby",
                             Email = "tom@day.com",
                             Employer = "Tinder",
@@ -74,7 +74,7 @@ namespace SpeakerAPI.Data.Migrations
                         },
                         new
                         {
-                            SpeakerId = "3892da4a-c809-4580-8ab0-1cc4e0c99756",
+                            SpeakerId = "e338154c-ea64-490a-87ad-69bea86fe777",
                             City = "Langley",
                             Email = "ann@fox.com",
                             Employer = "Hunter",
@@ -86,7 +86,7 @@ namespace SpeakerAPI.Data.Migrations
                         },
                         new
                         {
-                            SpeakerId = "9f8ed802-42ce-46fe-944a-897a1f1360d0",
+                            SpeakerId = "9d424e1e-4f86-4f9a-a0e9-569a473a5166",
                             City = "Vancouver",
                             Email = "art@ash.com",
                             Employer = "Art Gallery",
@@ -98,7 +98,7 @@ namespace SpeakerAPI.Data.Migrations
                         },
                         new
                         {
-                            SpeakerId = "b73f1fc6-b918-4767-8fdf-dee8013a8612",
+                            SpeakerId = "3d9289cb-21f3-48cc-ad98-af6dc55ba974",
                             City = "Coquitlam",
                             Email = "mia@hay.com",
                             Employer = "Hayers",

@@ -27,14 +27,14 @@ namespace SpeakerAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Speaker>>> GetStudents()
         {
-            return await _context.Students.ToListAsync();
+            return await _context.Speakers.ToListAsync();
         }
 
         // GET: api/Speakers/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Speaker>> GetSpeaker(string id)
         {
-            var speaker = await _context.Students.FindAsync(id);
+            var speaker = await _context.Speakers.FindAsync(id);
 
             if (speaker == null)
             {
@@ -80,7 +80,7 @@ namespace SpeakerAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Speaker>> PostSpeaker(Speaker speaker)
         {
-            _context.Students.Add(speaker);
+            _context.Speakers.Add(speaker);
             try
             {
                 await _context.SaveChangesAsync();
@@ -104,13 +104,13 @@ namespace SpeakerAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSpeaker(string id)
         {
-            var speaker = await _context.Students.FindAsync(id);
+            var speaker = await _context.Speakers.FindAsync(id);
             if (speaker == null)
             {
                 return NotFound();
             }
 
-            _context.Students.Remove(speaker);
+            _context.Speakers.Remove(speaker);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -118,7 +118,7 @@ namespace SpeakerAPI.Controllers
 
         private bool SpeakerExists(string id)
         {
-            return _context.Students.Any(e => e.SpeakerId == id);
+            return _context.Speakers.Any(e => e.SpeakerId == id);
         }
     }
 }
